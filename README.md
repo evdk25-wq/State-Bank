@@ -1,4 +1,4 @@
-# State-Bank-Solution-
+# State-Bank-Solution
 Bank App solution for training 
 
 A comprehensive banking application developed as part of my computer science curriculum to validate and deepen my skills in software architecture, Object-Oriented Programming in Java, and Client-Server communication.
