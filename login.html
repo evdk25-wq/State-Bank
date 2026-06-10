@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>State Bank — Accès Sécurisé</title>
+  <title>State Bank — Secure Access</title>
   <link rel="stylesheet" href="../css/login.css" />
 </head>
 <body>
+  <button id="langToggle" class="lang-switch" aria-label="Switch language">🇬🇧 EN</button>
 
  
 <aside class="panel-left">
@@ -21,21 +22,21 @@
     </div>
     <div class="brand-text">
       <span class="brand-name">State <strong>Bank</strong></span>
-      <span class="brand-tagline">Services en ligne</span>
+      <span class="brand-tagline">Online services</span>
     </div>
   </header>
 
   <section class="hero">
-    <p class="hero-label">Espace client</p>
-    <h1 class="hero-title">Accès sécurisé<br/>à vos comptes</h1>
-    <p class="hero-desc">Consultez vos comptes et effectuez des opérations en toute sécurité.</p>
+    <p class="hero-label">Customer area</p>
+    <h1 class="hero-title">Secure access to your accounts</h1>
+    <p class="hero-desc">View your accounts and make transactions securely.</p>
   </section>
 
   
 
   
-  <div class="ticker" aria-label="Données de marché en temps réel">
-    <span class="ticker__label">Marchés</span>
+  <div class="ticker" aria-label="Real-time market data">
+    <span class="ticker__label">Markets</span>
     <div class="ticker__viewport">
       <ul class="ticker__track" id="tickerTrack">
         <li class="ticker__item"><span class="ticker__sym">S&amp;P 500</span><span class="ticker__price">7 609,78</span><span class="ticker__change ticker__change--up">▲ +0,13%</span></li>
@@ -77,37 +78,36 @@
   <div class="auth-card">
 
     
-    <nav class="step-bar" aria-label="Étapes d'authentification">
+    <nav class="step-bar" aria-label="Authentication steps">
       <div class="step-node step-node--active" id="sn1">
         <div class="step-node__circle" id="sc1">1</div>
-        <span class="step-node__label">Identifiants</span>
+        <span class="step-node__label">Credentials</span>
       </div>
       <div class="step-bar__line" id="sl1"></div>
       <div class="step-node" id="sn2">
         <div class="step-node__circle" id="sc2">2</div>
-        <span class="step-node__label">Vérification 2FA</span>
+        <span class="step-node__label">2FA verification</span>
       </div>
       <div class="step-bar__line" id="sl2"></div>
       <div class="step-node" id="sn3">
         <div class="step-node__circle" id="sc3">3</div>
-        <span class="step-node__label">Accès</span>
+        <span class="step-node__label">Access</span>
       </div>
     </nav>
 
     
     <header class="form-header">
       <p class="form-header__eyebrow" id="formEyebrow"></p>
-        <h2 class="form-header__title" id="formTitle">Identifiants</h2>
+        <h2 class="form-header__title" id="formTitle">Credentials</h2>
         <p class="form-header__sub" id="formSub"></p>
-      
     </header>
 
     
-    <section class="step-panel step-panel--active" id="step1" aria-label="Étape 1 : Identifiants">
+    <section class="step-panel step-panel--active" id="step1" aria-label="Step 1: Credentials">
       <form id="loginForm" novalidate>
 
         <div class="field">
-          <label class="field__label" for="iban">Numéro client / IBAN</label>
+          <label class="field__label" for="iban">Customer number / IBAN</label>
           <div class="field__wrap">
             <input
               class="field__input"
@@ -127,7 +127,7 @@
         </div>
 
         <div class="field">
-          <label class="field__label" for="password">Mot de passe</label>
+          <label class="field__label" for="password">Password</label>
           <div class="field__wrap">
             <input
               class="field__input"
@@ -141,7 +141,7 @@
             <svg class="field__icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
               <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
             </svg>
-            <button type="button" class="field__toggle-pwd" id="togglePwd" aria-label="Afficher le mot de passe">
+            <button type="button" class="field__toggle-pwd" id="togglePwd" aria-label="Show password">
               <svg id="eyeIcon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
               </svg>
@@ -150,7 +150,7 @@
         </div>
 
         <div class="attempts-bar" aria-live="polite">
-          <span class="attempts-bar__label">Tentatives restantes</span>
+          <span class="attempts-bar__label">Attempts remaining</span>
           <div class="attempts-bar__dots">
             <span class="attempt-dot" id="d1"></span>
             <span class="attempt-dot" id="d2"></span>
@@ -166,13 +166,13 @@
                 <path d="M1.5 5L4 7.5L8.5 2.5" stroke="#08090b" stroke-width="1.8" stroke-linecap="round"/>
               </svg>
             </span>
-            Rester connecté
+            Keep me signed in
           </label>
-          <a href="#" class="link-muted">Mot de passe oublié ?</a>
+          <a href="#" class="link-muted">Forgot password?</a>
         </div>
 
         <button class="btn-primary" id="btn1" type="submit">
-          <span class="btn-primary__text" id="btn1Text">Se connecter</span>
+          <span class="btn-primary__text" id="btn1Text">Sign in</span>
           <span class="btn-primary__spinner" id="spin1" aria-hidden="true"></span>
           <svg class="btn-primary__arrow" id="btn1Arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
             <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -185,7 +185,7 @@
     </section>
 
     
-    <section class="step-panel" id="step2" aria-label="Étape 2 : Vérification OTP">
+    <section class="step-panel" id="step2" aria-label="Step 2: OTP verification">
 
       <div class="device-card">
         <div class="device-card__icon" aria-hidden="true">
@@ -194,14 +194,14 @@
           </svg>
         </div>
         <div class="device-card__info">
-          <p class="device-card__name">Code envoyé par SMS</p>
-          <p class="device-card__meta">+32 ••• ••• •78 — expire dans <time id="countdown">05:00</time></p>
+          <p class="device-card__name">Code sent by SMS</p>
+          <p class="device-card__meta">+32 ••• ••• •78 — expires in <time id="countdown">05:00</time></p>
         </div>
-        <span class="device-card__status">Actif</span>
+        <span class="device-card__status">Active</span>
       </div>
 
       <div class="field">
-        <label class="field__label">Code à 6 chiffres</label>
+        <label class="field__label">6-digit code</label>
         <div class="otp-group" role="group" aria-label="Code OTP à 6 chiffres">
           <input class="otp-box" type="tel" id="o1" maxlength="1" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" aria-label="Chiffre 1"/>
           <input class="otp-box" type="tel" id="o2" maxlength="1" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" aria-label="Chiffre 2"/>
@@ -210,33 +210,33 @@
           <input class="otp-box" type="tel" id="o5" maxlength="1" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" aria-label="Chiffre 5"/>
           <input class="otp-box" type="tel" id="o6" maxlength="1" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" aria-label="Chiffre 6"/>
         </div>
-        <p class="otp-hint">Code non reçu ? <button type="button" class="otp-hint__resend" id="resendBtn">Renvoyer</button></p>
+        <p class="otp-hint">Didn't receive a code? <button type="button" class="otp-hint__resend" id="resendBtn">Resend</button></p>
       </div>
 
       <button class="btn-primary" id="btn2" type="button">
-        <span class="btn-primary__text" id="btn2Text">Vérifier</span>
+        <span class="btn-primary__text" id="btn2Text">Verify</span>
         <span class="btn-primary__spinner" id="spin2" aria-hidden="true"></span>
       </button>
-      <button class="btn-ghost" id="btnBack" type="button">← Retour</button>
+      <button class="btn-ghost" id="btnBack" type="button">← Back</button>
 
       <p class="feedback" id="fb2" role="alert" aria-live="assertive"></p>
 
     </section>
 
     
-    <section class="step-panel" id="step3" aria-label="Étape 3 : Accès accordé">
+    <section class="step-panel" id="step3" aria-label="Step 3: Access granted">
       <div class="success-panel">
         <div class="success-panel__icon" aria-hidden="true">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
             <path d="M20 6L9 17l-5-5"/>
           </svg>
         </div>
-        <h3 class="success-panel__title">Identité vérifiée</h3>
-        <p class="success-panel__sub">Authentification à deux facteurs réussie.<br/>Redirection vers votre tableau de bord…</p>
+        <h3 class="success-panel__title">Identity verified</h3>
+        <p class="success-panel__sub">Two-factor authentication successful.<br/>Redirecting to your dashboard…</p>
         <div class="redirect-bar" aria-hidden="true">
           <div class="redirect-bar__fill"></div>
         </div>
-        <p class="redirect-label">Chargement du dashboard</p>
+        <p class="redirect-label">Loading dashboard</p>
       </div>
     </section>
 
@@ -245,9 +245,9 @@
   
 
 
-  <footer class="panel-right__footer">
+    <footer class="panel-right__footer">
     <span>© 2026 State Bank S.A.</span>
-    <a href="#" class="link-muted">Mentions légales</a>
+    <a href="#" class="link-muted">Legal</a>
   </footer>
 
 </main>
