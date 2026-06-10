@@ -1,3 +1,7 @@
+<p><img src="assets/StateBank.png" alt="Aperçu de l'application" style="max-width:100%;height:auto"></p>
+
+
+
 # State-Bank-Solution
 Bank App solution for training 
 
