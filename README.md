@@ -32,7 +32,7 @@ The project relies on a strict Object-Oriented structure:
 ## Key Features
 
 ### 1. Mass Data Generation (Mocking)
-* Initialization of **100 unique clients** generated randomly at startup (dynamic combination of first/last names, creation of valid IBANs with the FR76 format).
+* Initialization of **100 unique clients** generated randomly at startup (dynamic combination of first/last names, creation of valid IBANs with the FR76 format or an other).
 * Allocation of varied, realistic balances and initialization of distinct transaction histories.
 
 ### 2. Business Logic and Financial Accuracy (Java)
